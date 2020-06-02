@@ -1,0 +1,102 @@
+// Should you need to overwrite any of our SCSS code or need to add any custom code, We highly recommend that you add your code into this file, so whenever theme update is available and you update the theme, You will not lose your hard work :)
+
+/*User CSS*/
+.main-header {
+    background-color: $primary;
+    border-bottom: 8px solid #013267;
+    .navbar-collapse {
+        @include media-breakpoint-down(md) {
+            background-color: rgb(2, 75, 153);
+            border-bottom: 8px solid rgb(1, 50, 103);    
+        }
+    }
+    .nav-link.active {
+        color: $white !important;    
+    }
+    .nav-item {
+        @extend .nav-borders;
+    }
+    .navbar-nav .nav-item:last-child .nav-link {
+        padding-right: 1rem;
+    }
+    .nav-item {
+        @include hover-focus-active() {
+            background-color: $lightblue;
+        }
+    }
+    .nav-link {
+        color: $white !important;
+    }
+} 
+
+header.navbar-sticky-on {
+    background-color: $primary;
+}
+
+.nav-borders {
+    border-top: 1px solid #0370e5;
+    border-bottom: 1px solid #013267;
+    border-left: 1px solid #025ebf;
+    border-right: 1px solid #023873;
+}
+
+.goldactive {
+    background: linear-gradient(0.9deg, $lightgold 21.1%, $gold 96.8%);
+    border-top: 1px solid #ffbf4f;
+    border-bottom: 1px solid #db8b00;
+    border-left: 1px solid #ffbf4f;
+    border-right: 1px solid #db8b00;
+    @include hover-focus-active() {
+        background: linear-gradient(0.9deg, $lightgold 21.1%, $lightgold 96.8%);
+    }
+}
+
+
+.btn-action-grad {
+    color: $white;
+    @include transition-animation;
+    @include linear-gradient-btn-percent(lighten($primary, 20%), lighten($primary, 20%), $gray-200, 150deg, 80%);
+    background-size: 260% 100%;
+    background-position: right bottom;
+    border: 0;
+    line-height: 1.92;
+    
+    &.active, &:active, &:focus, &:hover {
+        color: $white;
+        background-position: left bottom;
+    }
+    &.btn-sm {
+        line-height: $line-height-sm + .4;
+    }
+}
+
+.red-btn-action-grad {
+    color: $white;
+    @include transition-animation;
+    @include linear-gradient-btn($secondary, $secondary, #bbb, 150deg);
+    background-size: 260% 100%;
+    background-position: right bottom;
+    border: 0;
+    line-height: 1.92;
+    
+    &.active, &:active, &:focus, &:hover {
+        color: $white;
+        background-position: left bottom;
+    }
+    &.btn-sm {
+        line-height: $line-height-sm + .4;
+    }
+}
+
+// remove search icon at 1282px
+.dnone-1282 {
+    @include below(1282) {
+        display: none;
+    }
+}
+
+.mleft-login {
+    @include below(1282) {
+        margin-left: 1rem;
+    }
+}
