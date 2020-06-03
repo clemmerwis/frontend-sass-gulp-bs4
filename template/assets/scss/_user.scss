@@ -1,37 +1,70 @@
 // Should you need to overwrite any of our SCSS code or need to add any custom code, We highly recommend that you add your code into this file, so whenever theme update is available and you update the theme, You will not lose your hard work :)
 
 /*User CSS*/
+.top-bar {
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 0 1rem;
+    .login.nav-item {
+        padding: 0;
+    }
+    .search.nav-item {
+        // margin-right: 2rem;
+        .nav-link {
+            padding-right: 1rem;
+            padding-left: 1rem;
+        }
+    }
+}
+
+.search.nav-item {
+    margin-right: 0.6rem;
+}
+
+.main-header.navbar-dark.navbar-sticky-on {
+    background-color: $primary;
+}
+
 .main-header {
     background-color: $primary;
     border-bottom: 8px solid #013267;
+    .navbar {
+        @include below(992) {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+    }
+    .navbar-brand {
+        @include below(600) {
+            margin-right: 0;
+        }
+    }
     .navbar-collapse {
         @include media-breakpoint-down(md) {
             background-color: rgb(2, 75, 153);
             border-bottom: 8px solid rgb(1, 50, 103);    
         }
     }
-    .nav-link.active {
-        color: $white !important;    
-    }
     .nav-item {
         @extend .nav-borders;
+        @include hover-focus-active() {
+            background-color: $lightblue;
+        }
+        .nav-link {
+            color: $white !important;
+            @include between(992, 1220) {
+                font-size: 0.85rem;
+            }
+            &.active {
+                color: $white !important;
+            }
+        }
     }
     .navbar-nav .nav-item:last-child .nav-link {
         padding-right: 1rem;
     }
-    .nav-item {
-        @include hover-focus-active() {
-            background-color: $lightblue;
-        }
-    }
-    .nav-link {
-        color: $white !important;
-    }
 } 
 
-header.navbar-sticky-on {
-    background-color: $primary;
-}
 
 .nav-borders {
     border-top: 1px solid #0370e5;
@@ -89,9 +122,27 @@ header.navbar-sticky-on {
 }
 
 // remove search icon at 1282px
-.dnone-1282 {
-    @include below(1282) {
-        display: none;
+.dnone-1165 {
+    @include below(1165) {
+        display: none !important;
+    }
+}
+
+.dnone-1099 {
+    @include below(1099) {
+        display: none !important;
+    }
+}
+
+.d-1165 {
+    @include above(1165) {
+        display: none !important;
+    }
+}
+
+.d-1099 {
+    @include above(1099) {
+        display: none !important;
     }
 }
 
@@ -100,3 +151,4 @@ header.navbar-sticky-on {
         margin-left: 1rem;
     }
 }
+
