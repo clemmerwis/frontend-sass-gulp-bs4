@@ -17,6 +17,35 @@
     }
 }
 
+
+// top bar fuss between mid and lg-xl
+.top-bar {
+    @include between(992, 1165) {
+        border-bottom: 1px solid #0370e5;	
+    }
+}
+
+.main-header .nav-item {
+    @include between(992, 1165) {
+        border-top: 0 !important;
+    }
+}
+
+.top-bar .search .nav-link {
+    @include between(992, 1165) {
+        line-height: 54px;
+    }
+}
+
+.navbar-nav .nav-link {
+    @include between(992, 1165) {
+        line-height: 64px;
+    }
+}
+
+
+
+// main nav
 .search.nav-item {
     margin-right: 0.6rem;
 }
@@ -29,7 +58,7 @@
     background-color: $primary;
     border-bottom: 8px solid #013267;
     .navbar {
-        @include below(992) {
+        @include below(991.98) {
             padding-top: 1rem;
             padding-bottom: 1rem;
         }
@@ -65,7 +94,7 @@
     }
 } 
 
-
+// main nav helpers
 .nav-borders {
     border-top: 1px solid #0370e5;
     border-bottom: 1px solid #013267;
@@ -84,7 +113,7 @@
     }
 }
 
-
+// homepage buttons
 .btn-action-grad {
     color: $white;
     @include transition-animation;
@@ -121,7 +150,7 @@
     }
 }
 
-// remove search icon at 1282px
+// search and login helpers
 .dnone-1165 {
     @include below(1165) {
         display: none !important;
@@ -135,13 +164,13 @@
 }
 
 .d-1165 {
-    @include above(1165) {
+    @include above(1166) {
         display: none !important;
     }
 }
 
 .d-1099 {
-    @include above(1099) {
+    @include above(1100) {
         display: none !important;
     }
 }
@@ -152,3 +181,26 @@
     }
 }
 
+.freedomcure-vid-col {
+    @include below(1199.98) {
+        align-self: center !important;
+    }
+    .fit-video {
+        padding-top: 2%;
+        @include below(1199.98) {
+            padding-top: 0;
+        }
+    }
+}
+
+// misc helpers
+.title-link {
+    color: #343a40;
+    @include hover-focus-active {
+        color: #0369d5;
+    }
+}
+
+.lh-3 {
+    line-height: 1.4;
+}

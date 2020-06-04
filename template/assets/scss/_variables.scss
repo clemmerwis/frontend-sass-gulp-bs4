@@ -81,9 +81,9 @@ $body-bg:                   $white;
 $body-color:                $gray-900;
 
 // Links
-$link-color:                $primary;
+$link-color:                $lightblue;
 $link-decoration:           none;
-$link-hover-color:          lighten($link-color, 20%);
+$link-hover-color:          lighten($primary, 20%);
 $link-hover-decoration:     none;
 
 // Paragraphs
@@ -91,8 +91,8 @@ $paragraph-margin-bottom:   1.3rem;
 
 
 // Line Height
-$line-height-base:          1.6;
-$line-height-lg:            1.7;
+$line-height-base:          1.7;
+$line-height-lg:            1.8;
 $line-height-sm:            1.4;
 
 $border-width:              1px;
@@ -126,7 +126,7 @@ $font-weight-bolder:          bolder;
 // Font Sizes
 $font-size-xs:                .8125rem; //13px
 // $font-size-base:              .875rem;  //14px
-$font-size-base:              .975rem;  //14px
+$font-size-base:              1rem;  //14px
 $font-size-lg:                $font-size-base * 1.25;
 $font-size-sm:                $font-size-base * .875;
 
