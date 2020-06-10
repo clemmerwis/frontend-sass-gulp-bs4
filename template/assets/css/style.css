@@ -18681,3 +18681,61 @@ xpush
 .lh-3 {
   line-height: 1.4;
 }
+
+.darkgold {
+  color: #f39f26;
+}
+
+.darkgold:hover, .darkgold:focus, .darkgold:active {
+  color: #f39f26 !important;
+  text-decoration: underline;
+}
+
+@media (max-width: 991.98px) {
+  .title {
+    padding-bottom: 1rem;
+  }
+}
+
+.main-footer {
+  border-top: 8px solid #013267;
+  background-color: #024b99;
+  color: #ffffff;
+}
+
+@media (max-width: 767.98px) {
+  .logo-col {
+    max-width: 100% !important;
+  }
+}
+
+@media (min-width: 576px) {
+  .col4-width {
+    max-width: 50%;
+    padding-right: 15px;
+    padding-left: 15px;
+    flex: none;
+    width: unset;
+  }
+}
+
+@media (min-width: 768px) {
+  .col4-width {
+    max-width: 33.33333%;
+    padding-right: 15px;
+    padding-left: 15px;
+    flex: none;
+    width: unset;
+  }
+}
+
+@media (max-width: 577.98px) {
+  .col4-width {
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}

@@ -204,3 +204,56 @@
 .lh-3 {
     line-height: 1.4;
 }
+
+.darkgold {
+    color: $darkgold;
+    @include hover-focus-active() {
+        color: $darkgold !important;
+        text-decoration: underline;
+    }
+}
+
+// Freedom is the Cure
+.title {
+    @include below(991.98) {
+        padding-bottom: 1rem;
+    }
+}
+
+// Footer
+.main-footer {
+    border-top: 8px solid #013267;
+    background-color: #024b99;
+    color: $white;
+}
+
+.logo-col {
+    @include below(767.98) {
+        max-width: 100% !important;
+    }
+}
+
+.col4-width {
+    @include above(576) {
+        max-width: 50%;
+        padding-right: 15px;
+        padding-left: 15px;
+        flex: none;
+        width: unset;
+    }
+    @include above(768) {
+        max-width: 33.33333%;
+        padding-right: 15px;
+        padding-left: 15px;
+        flex: none;
+        width: unset;
+    }
+    @include below(577.98) {
+        flex: 0 0 100%;
+        max-width: 100%;
+        position: relative;
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}
