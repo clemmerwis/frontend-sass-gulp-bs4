@@ -1,0 +1,57 @@
+// Themeblossom & original style.css
+.site, .site-header, .site-content .entry-header, .site-content .entry-content, .site-content .entry-summary, .site-content .entry-meta, .page-content, .archive-header, .page-header, .contributor-info, .comments-area {
+    max-width: 100% !important;
+}
+
+.site-header {
+    z-index: 5000;
+    background-color: #000;
+    position: relative;
+    width: 100%;
+}
+
+#promo {
+    position: relative;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    font-family: $font-family-base;
+    text-align: left;
+    text-transform: uppercase;
+    line-height: 33px;
+    font-weight: 400;
+    font-style: normal;
+    color: #618b9c;
+    font-size: 10px;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.24s ease-in-out;
+    background-color: #02275D;
+    border-bottom: 1px solid #04173B;
+    a {
+        color: #618b9c;
+        @include hover-focus() {
+            color: $white;
+            text-decoration: underline;
+        }
+    }
+    .top-nav-menu {
+        list-style: none;
+        margin: 0 !important;
+        .top-link {
+            padding-right: 15px;
+            &.last a {
+                color: $gold;
+            }
+        }
+    }
+    .top-social {
+        font-size: 15px;
+        a {
+            padding-left: 5px;
+            @include hover-focus() {
+                text-decoration: none;
+            }
+        }
+    }
+}

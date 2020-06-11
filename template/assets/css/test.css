@@ -1,0 +1,10 @@
+.site, .site-header, .site-content .entry-header, .site-content .entry-content, .site-content .entry-summary, .site-content .entry-meta, .page-content, .archive-header, .page-header, .contributor-info, .comments-area {
+  max-width: 100% !important;
+}
+
+.site-header {
+  z-index: 5000;
+  background-color: #000;
+  position: relative;
+  width: 100%;
+}
