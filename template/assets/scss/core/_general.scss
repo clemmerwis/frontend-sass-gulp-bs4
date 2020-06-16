@@ -418,11 +418,12 @@ textarea {
 
 }
 
-@include media-breakpoint-down(lg){
+@include media-breakpoint-down(md){
   .container {
-    width: 94%;
+    width: 99%;
   }
 }
+
 @include media-breakpoint-down(md) {
   .innerpage-banner {
     &.left .breadcrumb {

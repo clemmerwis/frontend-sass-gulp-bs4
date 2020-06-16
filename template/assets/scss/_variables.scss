@@ -30,7 +30,7 @@ $teal:        #20c997;
 $cyan:        #17a2b8;
 
 $primary:     #024b99;
-$secondary:   #b6031a;
+$secondary:   #D20921;
 $success:     $green;
 $info:        $cyan;
 $warning:     $yellow;
@@ -92,8 +92,8 @@ $paragraph-margin-bottom:   1.3rem;
 
 
 // Line Height
-$line-height-base:          1.7;
-$line-height-lg:            1.8;
+$line-height-base:          1.5;
+$line-height-lg:            1.7;
 $line-height-sm:            1.4;
 
 $border-width:              1px;
@@ -117,7 +117,7 @@ $transition-base:               all .3s ease-in-out;
 $font-family-base:            'Lato', sans-serif;
 $font-family-heading:         'Lora', serif;
 $font-family-alt:             'Oswald', sans-serif;
-$font-family-alt:             'PT Sans', sans-serif;
+$font-family-alt2:            'PT Sans', sans-serif;
 
 $font-weight-lighter:         lighter;
 $font-weight-light:           400;
@@ -380,7 +380,7 @@ $navbar-primary-toggler-icon-bg:    str-replace(url("data:image/svg+xml,%3csvg v
 
 // Define the maximum width of `.container`
 $container-max-widths: (
-  xl: 1200px
+  xl: 1170px
 );
 
 @include _assert-ascending($container-max-widths, "$container-max-widths");

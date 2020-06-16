@@ -455,6 +455,12 @@ a.primary-hover {
 .height-800 {
   height: 800px;
 }
+.height-900 {
+  height: 900px;
+  @include above(992) {
+    max-height: 816px;
+  }
+}
 .height-800-responsive {
   height: 800px;
 }

@@ -1,3 +1,190 @@
 // Should you need to overwrite any of our SCSS code or need to add any custom code, We highly recommend that you add your code into this file, so whenever theme update is available and you update the theme, You will not lose your hard work :)
 
 /*User CSS*/
+html, body {
+    width: 100%;
+}
+
+// container adjust
+.container {
+    @include above(768) {
+        max-width: 750px;
+    }
+    @include above(992) {
+        max-width: 970px;
+    }
+    @include above(1200) {
+        max-width: 1170px;
+    }
+}
+
+// Header
+#site-branding .navbar-brand {
+    max-width: 70%;
+    @include above(576) {
+        max-width: 100%;
+    }
+} 
+
+.height-900 {
+    @include below(575.98) {
+        max-height: 858px;
+    }
+    @include below(441) {
+        min-height: 900px !important;
+    }
+    @include below(342) {
+        min-height: 950px !important;
+    }
+    @include below(326) {
+        min-height: 980px !important;
+    }
+    @include between(576.98, 767) {
+        max-height: 820px;
+    }
+    @include above(767.98) {
+        max-height: 840px;
+        max-height: 900px;
+
+    }
+    @include above(1200) {
+        max-height: 800px;
+    }
+    .row {
+        @include below(576) {
+            height: 100%;
+            // align-content: center;    
+        }
+    }
+}
+
+.main-banner {
+    margin-bottom: -100px;
+    @include above(576) {
+        margin-bottom: -135px;
+    }
+    @include above(768) {
+        margin-bottom: -130px;
+    }
+    @include above(992) {
+        margin-bottom: -130px;    
+    }
+    .bannerimg {
+        background-image: url('../../assets/images/banner/freedom-is-the-cure2.jpg'); 
+        background-position: center center; 
+        background-size: cover;
+    }
+    .banner-content {
+        padding-top: 130px;
+        padding-left: 15px;
+        padding-right: 15px;
+        width: 100%;
+        @include below(521.98) {
+            padding-top: 150px;
+        }
+        @include below(441) {
+            padding-top: 120px;
+        }
+        @include between(522, 576) {
+            padding-top: 200px;
+        }
+        // @include above(576) {
+        //     max-width: 515px;
+        // }
+        @include above(768) {
+            width: 50%;
+            max-width: 515px;
+            padding-left: 0;
+            padding-right: 0;
+        }
+        @include above(992) {
+            max-width: 585px;
+        }
+    }
+}
+
+
+.goldactive {
+    background: linear-gradient(0.9deg, $lightgold 21.1%, $gold 96.8%);
+    border-top: 1px solid #ffbf4f;
+    border-bottom: 1px solid #db8b00;
+    border-left: 1px solid #ffbf4f;
+    border-right: 1px solid #db8b00;
+    @include hover-focus-active() {
+        background: linear-gradient(0.9deg, $lightgold 21.1%, $lightgold 96.8%);
+    }
+}
+
+
+// homepage buttons
+.btn-action-grad {
+    color: $white;
+    @include transition-animation;
+    @include linear-gradient-btn-percent(lighten($primary, 20%), lighten($primary, 20%), $gray-200, 150deg, 80%);
+    background-size: 260% 100%;
+    background-position: right bottom;
+    border: 0;
+    line-height: 1.92;
+    
+    &.active, &:active, &:focus, &:hover {
+        color: $white;
+        background-position: left bottom;
+    }
+    &.btn-sm {
+        line-height: $line-height-sm + .4;
+    }
+}
+
+.red-btn-action-grad {
+    color: $white;
+    @include transition-animation;
+    @include linear-gradient-btn($secondary, $secondary, #bbb, 150deg);
+    background-size: 260% 100%;
+    background-position: right bottom;
+    border: 0;
+    line-height: 1.92;
+    
+    &.active, &:active, &:focus, &:hover {
+        color: $white;
+        background-position: left bottom;
+    }
+    &.btn-sm {
+        line-height: $line-height-sm + .4;
+    }
+}
+
+
+.darkgold {
+    color: $darkgold;
+    @include hover-focus() {
+        color: $darkgold !important;
+        text-decoration: underline;
+    }
+}
+
+
+// grid
+.grid-form {
+    display: grid;
+    grid-template-areas:
+        'fname'
+        'fzip'
+        'fmail'
+        'fbtn';
+    @include above(768) {
+        grid-column-gap: 30px;
+        grid-template-columns: repeat(2, minmax(auto, 1fr));
+        grid-template-areas:
+            'fname fzip'
+            'fmail fmail'
+            'fbtn  ...';
+    }
+}
+
+.fname { grid-area: fname; }
+
+.fzip { grid-area: fzip; }
+
+.fmail { grid-area: fmail; }
+
+.fbtn { grid-area: fbtn; }
