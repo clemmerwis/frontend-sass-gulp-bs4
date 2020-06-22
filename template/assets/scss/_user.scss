@@ -77,6 +77,10 @@
     z-index: 1000;
     margin-right: 0;
     margin-left: 0;
+    @include hover-focus {
+        transition: all 200ms ease-in-out;
+        opacity: 0.8;
+    }
 }
 
 .site-title {
@@ -99,6 +103,10 @@
     background-color: #022D6D;
     background-repeat: no-repeat;
     background-position: center top;
+    .navbar-nav .dropdown-menu {
+        transition: 600ms all ease-in-out !important;
+        top: 100%;
+    }
     .nav-link {
         color: $turk;
         padding-right: 23px;
@@ -114,6 +122,37 @@
         @include hover-focus {
             color: $white;
             background-color: #02275D;
+        }
+    }
+    .dropdown-submenu .dropdown-menu {
+        top: 45%;
+        transition: 400ms all ease-in-out !important;
+        &.shop {
+            left: -100%;
+        }
+    }
+    .dropdown-menu {
+        background-color: #02275D;
+        padding: 0;
+        li:first-child {
+            border-top: none !important;
+        }
+        li {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+        }
+        .dropdown-item {
+            padding-top: 9px;
+            padding-bottom: 9px;
+            font-size: 12px;
+            background-color: #02275D;
+            text-transform: none;
+            line-height: 24px;
+            font-weight: 700;
+            color: $white !important;
+            @include hover-focus {
+                color: $turk !important;
+            }
         }
     }
     .active > .nav-link {
