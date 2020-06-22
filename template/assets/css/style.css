@@ -18580,6 +18580,13 @@ xpush
   font-weight: 700;
 }
 
+@media (max-width: 1200px) {
+  #site-branding .nav-link {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
 #site-branding .nav-link:hover, #site-branding .nav-link:focus {
   color: #ffffff;
   background-color: #02275D;
@@ -18593,6 +18600,12 @@ xpush
 #site-branding .special {
   position: relative;
   margin-left: 50px;
+}
+
+@media (max-width: 1200px) {
+  #site-branding .special {
+    margin-left: 5px;
+  }
 }
 
 #site-branding .special .nav-link {

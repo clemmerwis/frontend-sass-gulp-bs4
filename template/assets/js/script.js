@@ -2,7 +2,7 @@
     var toggler = $('.navbar-toggler');
     var header = $('.site-header');
     var branding = $('#site-branding');
-    if ($(window).width() >= 992) {
+    if (window.innerWidth >= 992) {
         $(window).bind('scroll', function () 
         {
             var promo = $('.promo');

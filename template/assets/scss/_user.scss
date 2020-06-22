@@ -107,6 +107,10 @@
         text-transform: uppercase;
         line-height: 100px;
         font-weight: 700;
+        @include below(1200) {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
         @include hover-focus {
             color: $white;
             background-color: #02275D;
@@ -119,10 +123,16 @@
     .special {
         position: relative; 
         margin-left: 50px;
+        @include below(1200) {
+            margin-left: 5px;
+        }
         .nav-link {
             background-color: #D10B20;
             transition: all 200ms ease-in-out;
             font-size: 12px;
+            @include below(1200) {
+                // padding-left: 23px;
+            }
             .cont {
                 font-family: $font-family-base;
             }
