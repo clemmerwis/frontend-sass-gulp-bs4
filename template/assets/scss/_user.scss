@@ -1,9 +1,302 @@
 // Should you need to overwrite any of our SCSS code or need to add any custom code, We highly recommend that you add your code into this file, so whenever theme update is available and you update the theme, You will not lose your hard work :)
 
 /*User CSS*/
+.site, .site-header, .site-content .entry-header, .site-content .entry-content, .site-content .entry-summary, .site-content .entry-meta, .page-content, .archive-header, .page-header, .contributor-info, .comments-area {
+    max-width: 100% !important;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    font-family: 'icomoon';
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.fw-row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.site-header {
+    z-index: 5000;
+    position: relative;
+    width: 100%;
+}
+
+#promo {
+    position: relative;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    font-family: $font-family-base;
+    text-align: left;
+    text-transform: uppercase;
+    line-height: 33px;
+    font-weight: 400;
+    font-style: normal;
+    color: #618b9c;
+    font-size: 10px;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.24s ease-in-out;
+    background-color: #02275D;
+    border-bottom: 1px solid #04173B;
+    a {
+        color: #618b9c;
+        @include hover-focus() {
+            color: $white;
+            text-decoration: underline;
+        }
+    }
+    .top-nav-menu {
+        list-style: none;
+        margin: 0 !important;
+        .top-link {
+            padding-right: 15px;
+        }
+    }
+    .top-social {
+        font-size: 15px;
+        a {
+            padding-left: 5px;
+            @include hover-focus() {
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+// site nav
+#main-logo {
+    transition: all 200ms ease-in-out;
+    position: relative;
+    z-index: 1000;
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.site-title {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 48px;
+}
+
+#tb-responsive-nav-trigger {
+    z-index: 1000;
+    color: #fff;
+    font-size: 30px;
+    line-height: 30px;
+}
+
+#site-branding.lineheight88 .nav-link {
+    line-height: 88px;
+}
+#site-branding {
+    background-color: #022D6D;
+    background-repeat: no-repeat;
+    background-position: center top;
+    .nav-link {
+        color: $turk;
+        padding-right: 23px;
+        padding-left: 23px;
+        font-size: 12px;
+        text-transform: uppercase;
+        line-height: 100px;
+        font-weight: 700;
+        @include hover-focus {
+            color: $white;
+            background-color: #02275D;
+        }
+    }
+    .active > .nav-link {
+        color: $white;
+        background-color: #02275D;
+    }
+    .special {
+        position: relative; 
+        margin-left: 50px;
+        .nav-link {
+            background-color: #D10B20;
+            transition: all 200ms ease-in-out;
+            font-size: 12px;
+            .cont {
+                font-family: $font-family-base;
+            }
+            @include hover-focus {
+                background-color: #b1091b;
+                transition: all 200ms ease-in-out;
+            }
+            &:before {
+                position: relative;
+                font-size: 16px;
+                line-height: 0;
+                margin-right: 9px;
+                top: 2px;
+                font-weight: 100;
+                width: 1em;
+                text-align: center;
+            }
+        }
+    }
+}
+
+
+#main-logo-link {
+    opacity: 1;
+}
+
+.primary-navigation {
+    font-size: 14px;
+    padding-top: 24px;
+}
+
+// Banner Form
+.fpara {
+    @include between(601, 767.98) {
+        max-width: 87% !important;
+    }
+}
+
+.ctablock {
+    cursor: pointer;
+    position: relative;
+    img, h3 {
+        transition: all 0.4s ease;
+    }
+    img {
+        @include above(768) {
+            transform: translateY(30%);
+            min-width: 100% !important;
+            max-width: unset;
+        }
+        @include above(992) {
+            transform: translateY(20%);
+            min-width: 100% !important;
+            max-width: unset;
+        }
+    }
+    div + div {
+        @include above(768) {
+            margin-left: 15px;
+        }
+    }
+    @include hover-focus {
+        img {
+            opacity: 0.7;
+            transition: all 0.4s ease;
+        }
+        h3 {
+            color: #e3a4ab !important;
+            transition: all 0.4s ease;
+        }
+    }
+}
+
+
+.hp-join-the-team-form {
+    margin-top: 28px;
+    .form-group {
+        margin-bottom: 0;
+    }
+    .form-control {
+        background: #fbfaf9;
+        margin-bottom: 23px;
+        font-size: 14px;
+        height: 41px;
+        line-height: 20px;
+        color: #555;
+        background-color: #fff;
+        border: 1px solid #5c7799;
+        border-radius: 4px;
+        padding: 0 1.5rem;
+    }
+}
+
+::-webkit-input-placeholder {
+    font-style: italic;
+ }
+ :-moz-placeholder {
+    font-style: italic;  
+ }
+ ::-moz-placeholder {
+    font-style: italic;  
+ }
+ :-ms-input-placeholder {  
+    font-style: italic; 
+ }
+
+.bannersubmit {
+    border: 0;
+    border-radius: 2px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 10px 30px 11px !important;
+    text-transform: uppercase;
+    transition: all 200ms ease-in-out !important;
+    line-height: 23px;
+}
+
+// 3 CTA under banner
+.cta-blocks {
+    background-image: url(../../assets/images/bg/hp-blocks-no_change.png);
+    background-repeat: repeat;
+    background-position: center center;
+    background-size: auto;
+    visibility: visible;
+}
+
+.call-to-action-cols {
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.noborder {
+    border: 0 !important;
+}
+
+.padding15-xs {
+    padding: 40px 15px;
+    color: #e3a4ab; 
+    @include between(576, 767) {
+        padding: 30px 0px 30px 0px;
+    }
+    @include above(768) {
+        padding: 20px 0px 20px 0px;
+    }
+    @include above(992) {
+        padding: 22px 0px 22px 0px;
+    }
+}
+
+.call-to-action-cols h3 {
+    margin-top: 10px !important;
+    margin-bottom: 5px !important;
+    line-height: 25px !important;
+    text-transform: uppercase;
+    font-family: $font-family-base;
+    font-size: 21px;
+    font-weight: 400;
+}
+
+.call-to-action-cols p {
+    line-height: 25.6px;
+}
+
+
+
 html, body {
     width: 100%;
 }
+
+.preloader {
+    background-image: url(../../assets/images/bg/footer_flag.jpg);
+    background-size: cover;
+}
+
 
 // container adjust
 .container {
@@ -52,8 +345,7 @@ html, body {
     }
     .row {
         @include below(576) {
-            height: 100%;
-            // align-content: center;    
+            height: 100%; 
         }
     }
 }
@@ -157,8 +449,7 @@ html, body {
 .darkgold {
     color: $darkgold;
     @include hover-focus() {
-        color: $darkgold !important;
-        text-decoration: underline;
+        color: $lightgold !important;
     }
 }
 
@@ -188,3 +479,323 @@ html, body {
 .fmail { grid-area: fmail; }
 
 .fbtn { grid-area: fbtn; }
+
+
+.grid-actionpost {
+    display: grid;
+    grid-template-areas:
+        'topimg'
+        'cerpt';
+}
+
+.topimg { grid-area: topimg; }
+
+.cerpt { grid-area: cerpt; }
+
+.more { grid-area: more; }
+
+.section-title  {
+    font-size: 50px;
+    line-height: 90px;
+    font-weight: 400;
+    font-family: $font-family-heading;
+}
+
+// Action Projects Slider
+.actionprojects {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: rgb(249, 249, 249);
+    .titlepart  {
+        h1 {
+            color: #1d434c;
+        }
+        h4 {
+            color: #c6c6c6;
+            text-transform: uppercase;
+            margin: 0;
+            line-height: 30px;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 18px;
+            font-family: $font-family-base;
+        }
+    }
+    .post {
+        transition: all 200ms ease-in-out;
+        border: unset;
+        cursor: pointer;
+        a {
+            transition: unset;
+        }
+        @include hover-focus {
+            .post-info {
+                color: $white;
+                background-color: $red;
+                transition: all 200ms ease-in-out;
+            } 
+            .read-more {
+                color: $white !important;
+                border-top-color: rgba($white, $alpha: 0.2) !important;
+                transition: all 200ms ease-in-out;
+            }   
+            
+            .bluelayer::before {
+                opacity: 0.8;
+                transition: all 200ms ease-in-out;
+            }    
+        }
+
+        .bluelayer {
+            position: relative; 
+            border: 1px solid transparent;
+            border-bottom: none;
+            overflow: hidden;
+            transition: all 200ms ease-in-out;
+            &::before {
+                position: absolute;
+                content: "";
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(rgba($blue, $alpha: 0.45), rgba($blue, $alpha: 0.45));
+                transition: all 200ms ease-in-out;
+            }
+            .title-time {
+                color: $white !important;
+                position: absolute;
+                bottom: 30px;
+                left: 20px;
+                max-width: 100%;
+                h1 {
+                    font-family: $font-family-heading;
+                    font-size: 24px !important;
+                    line-height: 30px;
+                    margin: 0;
+                    color: $white !important;
+                    font-weight: 400;
+                }
+                i {
+                    margin-right: 10px;
+                    color: $white !important;
+                }
+            }
+        }        
+        .post-info {
+            border: 1px solid #E9E9E9;
+            border-top: none;
+            color: rgb(33, 71, 127);
+            transition: all 200ms ease-in-out;
+            p {
+                padding: 30px;
+                margin: 0 0 10px;
+            } 
+            a {
+                color: unset;
+            }
+            .post-tag {
+                left: 1px;
+                right: unset;
+                padding: 5px 20px;
+                text-transform: uppercase;
+                border-radius: unset;
+                background-color: $secondary;
+                font-size: 12px;
+            }
+            .read-more {
+                border-top: 1px solid #E9E9E9;
+                padding: 15px 0;
+                color: #a02e2f;
+                text-transform: uppercase;
+                transition: all 200ms ease-in-out;
+                @include hover-focus {
+                    .bluelayer::before {
+                        opacity: 0.85;
+                        transition: all 200ms ease-in-out;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Freedom is the Cure
+.freedomiscure {
+    background-image: url(../../assets/images/bg/event_image.jpg);
+    // background-image: url(../../assets/images/bg/bg_flag.jpg);
+    // background-image: url(../../assets/images/banner/freedom-is-the-cure-768.jpg);
+    padding-top: 150px;
+    padding-bottom: 150px;
+    background-position-x: 60%;
+    .btn-group {
+        flex-wrap: wrap;
+        overflow: hidden;
+        .btn {
+            // border-color: #04173B !important;
+            border: unset;
+            border-radius: unset;
+            // border-right: 1px solid rgba(255, 255, 255, 0.1);
+            border-right: 1px solid rgba(#04173B, $alpha: 0.1);
+            background-color: rgba($blue, $alpha: 0.9);
+            @include hover-focus {
+                background-color: $darkblue;
+            }
+        }
+    }
+}
+
+.parallax-section {
+	position: relative;
+	background-repeat: no-repeat;
+	background-size: auto 100% !important;
+    overflow: hidden;
+    @include above(992) {
+        background-attachment: fixed !important;
+		background-size: cover !important;
+    }
+}
+
+.custom-text-grad {
+    background: linear-gradient($darkred, $red); 
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -ms-background-clip: text;
+    -o-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    -ms-text-fill-color: transparent;
+    -o-text-fill-color: transparent;
+    text-fill-color: transparent;
+    opacity: 1;
+    z-index: 9;
+  }
+// Who We Are Section
+.who {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: $white;
+    .titlepart  {
+        h1 {
+            // color: #1d434c;
+            font-weight: bold;
+        }
+        h4 {
+            color: #c6c6c6;
+            text-transform: uppercase;
+            margin: 0;
+            line-height: 30px;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 18px;
+            font-family: $font-family-base;
+        }
+    }
+}
+
+// Footer Social Section
+.footer-social {
+    position: relative;
+    padding: 20px 0;
+    border-top: 0px solid #021c43;
+    border-bottom: 0px solid #021c43;
+    background-color: $blue;
+    a {
+        display: inline-block;
+        margin: 5px;
+        text-decoration: none;
+        height: 40px;
+        width: 40px;
+        border: 2px solid #9BADC7;
+        border-radius: 50px;
+        text-align: center;
+        color: #9BADC7;
+        @include hover-focus {
+            border-color: $white;
+            color: $white;
+        }
+    }
+    span {
+        font-size: 20px;
+        line-height: 36px;
+        width: 36px;
+        height: 36px;
+        text-align: center;
+        display: block;
+    }
+}
+
+// Client Section
+.client {
+    padding: 30px 0;
+    @include above(568) {
+        padding: 35px 0;
+    }
+    background-color: #205FA2;
+    background-repeat: repeat;
+    background-image: url(../../assets/images/bg/footer_wide_no_change.png);
+    border-bottom: 1px solid #225E9D;
+    .owl-carousel .owl-nav {
+        display: none;
+    }
+}
+
+// footer
+.site-footer {
+    padding: 120px 0;
+    font-family: $font-family-base;
+    text-align: left;
+    line-height: 22px;
+    font-weight: 400;
+    font-style: normal;
+    color: #FFFFFF;
+    font-size: 16px;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.24s ease-in-out;
+    border-top: 1px solid #1F5EA1;
+    border-bottom: 0px solid #1F5EA1;
+    background-color: #043174;
+    background-image: url(../../assets/images/bg/footer_flag.jpg);
+    background-size: cover;
+    .tagline {
+        max-width: 60%;
+        @include above(768) {
+            max-width: 100%;
+        }
+    }
+}
+
+// footer nav section
+.footer-nav {
+    padding: 20px 0;
+    font-family: Lato;
+    text-align: left;
+    line-height: 28px;
+    font-weight: 400;
+    font-style: normal;
+    color: #7CA1CC;
+    font-size: 16px;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.24s ease-in-out;
+    border-top: 0px solid #011533;
+    background-color: #022A65;
+    li a {
+        color: #7CA1CC;
+        @include hover-focus {
+            color: $white !important;
+            text-decoration: underline;
+        }
+    }
+    .copyright-text {
+        color: $turk;
+    }
+}
+
+// back to top
+.custom-grad {
+    background: linear-gradient(150deg, $gray-700 0%, #333 50%, #000 100%);
+    @include hover-focus {
+        background: linear-gradient(150deg, #000 0%, #000 50%, #000 100%) !important;
+    } 
+}
