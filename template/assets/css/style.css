@@ -18467,6 +18467,10 @@ xpush
   max-width: 100% !important;
 }
 
+a {
+  transition: all 200ms ease-in-out !important;
+}
+
 [class^="icon-"], [class*=" icon-"] {
   font-family: 'icomoon';
   font-style: normal;
