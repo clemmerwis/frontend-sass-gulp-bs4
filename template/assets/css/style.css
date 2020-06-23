@@ -18642,6 +18642,7 @@ a {
 
 #site-branding .dropdown-menu .dropdown-item:hover, #site-branding .dropdown-menu .dropdown-item:focus {
   color: #3ebcd8 !important;
+  background-color: #022D6D;
 }
 
 #site-branding .active > .nav-link {
@@ -18930,35 +18931,35 @@ html, body {
   }
 }
 
-.main-banner {
+.home-page .main-banner {
   margin-bottom: -100px;
 }
 
 @media (min-width: 576px) {
-  .main-banner {
+  .home-page .main-banner {
     margin-bottom: -135px;
   }
 }
 
 @media (min-width: 768px) {
-  .main-banner {
+  .home-page .main-banner {
     margin-bottom: -130px;
   }
 }
 
 @media (min-width: 992px) {
-  .main-banner {
+  .home-page .main-banner {
     margin-bottom: -130px;
   }
 }
 
-.main-banner .bannerimg {
+.home-page .main-banner .bannerimg {
   background-image: url("../../assets/images/banner/freedom-is-the-cure2.jpg");
   background-position: center center;
   background-size: cover;
 }
 
-.main-banner .banner-content {
+.home-page .main-banner .banner-content {
   padding-top: 130px;
   padding-left: 15px;
   padding-right: 15px;
@@ -18966,25 +18967,25 @@ html, body {
 }
 
 @media (max-width: 521.98px) {
-  .main-banner .banner-content {
+  .home-page .main-banner .banner-content {
     padding-top: 150px;
   }
 }
 
 @media (max-width: 441px) {
-  .main-banner .banner-content {
+  .home-page .main-banner .banner-content {
     padding-top: 120px;
   }
 }
 
 @media (min-width: 522px) and (max-width: 576px) {
-  .main-banner .banner-content {
+  .home-page .main-banner .banner-content {
     padding-top: 200px;
   }
 }
 
 @media (min-width: 768px) {
-  .main-banner .banner-content {
+  .home-page .main-banner .banner-content {
     width: 50%;
     max-width: 515px;
     padding-left: 0;
@@ -18993,7 +18994,7 @@ html, body {
 }
 
 @media (min-width: 992px) {
-  .main-banner .banner-content {
+  .home-page .main-banner .banner-content {
     max-width: 585px;
   }
 }
