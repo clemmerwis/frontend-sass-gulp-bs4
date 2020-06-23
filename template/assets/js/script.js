@@ -27,4 +27,41 @@
         header.removeClass('navbar-sticky');
     }
 
+   
+
+
+    //Mobile menu
+    $(function() {
+        $('nav#menu').mmenu({
+            extensions				: [ 'effect-slide-menu', 'shadow-page', 'shadow-panels', "fx-listitems-slide", "fullscreen", 'position-right' ],
+            keyboardNavigation 		: true,
+            screenReader 			: true,
+            counters				: true,
+            navbar 	: {
+                title	: ''
+            },
+            navbars	: [
+                {
+                    position	: 'top',
+                    content		: [ 'searchfield' ]
+                }, {
+                    position	: 'top',
+                    content		: [
+                        'prev',
+                        'title',
+                        'close'
+                    ]
+                }, {
+                    position	: 'bottom',
+                    content		: [
+                        ''
+                    ]
+                }
+            ]
+        });
+    });
+
+
+
+
 })(jQuery);
