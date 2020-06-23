@@ -108,7 +108,7 @@ a {
     background-repeat: no-repeat;
     background-position: center top;
     .navbar-nav .dropdown-menu {
-        transition: 600ms all ease-in-out !important;
+        transition: 500ms all ease-in-out !important;
         top: 100%;
     }
     .nav-link {
@@ -156,6 +156,7 @@ a {
             color: $white !important;
             @include hover-focus {
                 color: $turk !important;
+                background-color: #022D6D;
             }
         }
     }
@@ -403,7 +404,7 @@ html, body {
     }
 }
 
-.main-banner {
+.home-page .main-banner {
     margin-bottom: -100px;
     @include above(576) {
         margin-bottom: -135px;
@@ -697,8 +698,9 @@ html, body {
             border: unset;
             border-radius: unset;
             // border-right: 1px solid rgba(255, 255, 255, 0.1);
-            border-right: 1px solid rgba(#04173B, $alpha: 0.1);
-            background-color: rgba($blue, $alpha: 0.9);
+            // border-right: 1px solid rgba(#04173B, $alpha: 0.1);
+            border-right: 3px solid rgba(255, 255, 255, 0.1);
+            background-color: rgba($superlightblue, $alpha: 0.9);
             @include hover-focus {
                 background-color: $darkblue;
             }
@@ -728,7 +730,6 @@ html, body {
     -moz-text-fill-color: transparent;
     -ms-text-fill-color: transparent;
     -o-text-fill-color: transparent;
-    text-fill-color: transparent;
     opacity: 1;
     z-index: 9;
   }
@@ -845,11 +846,11 @@ html, body {
     background-color: #022A65;
     .copyright-links {
         ul {
-            list-style: none;
+            list-style-type: none !important;
         }
         li {
-            flex: auto;
-            padding-right: 20px;
+            flex: 0 0 auto;
+            padding-right: 25px;
             a {
                 color: #7CA1CC;
                 @include hover-focus {
@@ -871,4 +872,15 @@ html, body {
     @include hover-focus {
         background: linear-gradient(150deg, #000 0%, #000 50%, #000 100%) !important;
     } 
+}
+
+
+// Blog Page
+.blog-page .main-banner {
+}
+
+.blog-single {
+    .sidebar {
+        padding: 48px 28px 0;
+    }
 }

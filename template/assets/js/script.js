@@ -1,3 +1,4 @@
+
 (function ($) {
     var toggler = $('.navbar-toggler');
     var header = $('.site-header');
@@ -25,6 +26,5 @@
     else {
         header.removeClass('navbar-sticky');
     }
-
 
 })(jQuery);

@@ -12831,6 +12831,10 @@ a.primary-hover:hover {
 }
 
 /*height and width*/
+.height-400 {
+  height: 400px;
+}
+
 .height-600 {
   height: 600px;
 }
@@ -18580,7 +18584,7 @@ a {
 }
 
 #site-branding .navbar-nav .dropdown-menu {
-  transition: 600ms all ease-in-out !important;
+  transition: 500ms all ease-in-out !important;
   top: 100%;
 }
 
@@ -18642,6 +18646,7 @@ a {
 
 #site-branding .dropdown-menu .dropdown-item:hover, #site-branding .dropdown-menu .dropdown-item:focus {
   color: #3ebcd8 !important;
+  background-color: #022D6D;
 }
 
 #site-branding .active > .nav-link {
@@ -18930,35 +18935,35 @@ html, body {
   }
 }
 
-.main-banner {
+.home-page .main-banner {
   margin-bottom: -100px;
 }
 
 @media (min-width: 576px) {
-  .main-banner {
+  .home-page .main-banner {
     margin-bottom: -135px;
   }
 }
 
 @media (min-width: 768px) {
-  .main-banner {
+  .home-page .main-banner {
     margin-bottom: -130px;
   }
 }
 
 @media (min-width: 992px) {
-  .main-banner {
+  .home-page .main-banner {
     margin-bottom: -130px;
   }
 }
 
-.main-banner .bannerimg {
+.home-page .main-banner .bannerimg {
   background-image: url("../../assets/images/banner/freedom-is-the-cure2.jpg");
   background-position: center center;
   background-size: cover;
 }
 
-.main-banner .banner-content {
+.home-page .main-banner .banner-content {
   padding-top: 130px;
   padding-left: 15px;
   padding-right: 15px;
@@ -18966,25 +18971,25 @@ html, body {
 }
 
 @media (max-width: 521.98px) {
-  .main-banner .banner-content {
+  .home-page .main-banner .banner-content {
     padding-top: 150px;
   }
 }
 
 @media (max-width: 441px) {
-  .main-banner .banner-content {
+  .home-page .main-banner .banner-content {
     padding-top: 120px;
   }
 }
 
 @media (min-width: 522px) and (max-width: 576px) {
-  .main-banner .banner-content {
+  .home-page .main-banner .banner-content {
     padding-top: 200px;
   }
 }
 
 @media (min-width: 768px) {
-  .main-banner .banner-content {
+  .home-page .main-banner .banner-content {
     width: 50%;
     max-width: 515px;
     padding-left: 0;
@@ -18993,7 +18998,7 @@ html, body {
 }
 
 @media (min-width: 992px) {
-  .main-banner .banner-content {
+  .home-page .main-banner .banner-content {
     max-width: 585px;
   }
 }
@@ -19289,8 +19294,8 @@ html, body {
 .freedomiscure .btn-group .btn {
   border: unset;
   border-radius: unset;
-  border-right: 1px solid rgba(4, 23, 59, 0.1);
-  background-color: rgba(4, 49, 116, 0.9);
+  border-right: 3px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(32, 95, 162, 0.9);
 }
 
 .freedomiscure .btn-group .btn:hover, .freedomiscure .btn-group .btn:focus {
@@ -19322,7 +19327,6 @@ html, body {
   -moz-text-fill-color: transparent;
   -ms-text-fill-color: transparent;
   -o-text-fill-color: transparent;
-  text-fill-color: transparent;
   opacity: 1;
   z-index: 9;
 }
@@ -19446,12 +19450,12 @@ html, body {
 }
 
 .footer-nav .copyright-links ul {
-  list-style: none;
+  list-style-type: none !important;
 }
 
 .footer-nav .copyright-links li {
-  flex: auto;
-  padding-right: 20px;
+  flex: 0 0 auto;
+  padding-right: 25px;
 }
 
 .footer-nav .copyright-links li a {
@@ -19473,4 +19477,8 @@ html, body {
 
 .custom-grad:hover, .custom-grad:focus {
   background: linear-gradient(150deg, #000 0%, #000 50%, #000 100%) !important;
+}
+
+.blog-single .sidebar {
+  padding: 48px 28px 0;
 }
