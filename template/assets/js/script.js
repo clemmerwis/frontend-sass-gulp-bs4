@@ -61,7 +61,8 @@
         });
     });
 
-
-
+    // $('#menu-primary .dropdown-menu .dropdown-item + .dropdown-menu').each(function() {
+    //     $(this).prev().addClass('dropdown-toggle');
+    // });
 
 })(jQuery);

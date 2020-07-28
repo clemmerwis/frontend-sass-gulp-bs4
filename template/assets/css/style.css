@@ -18463,6 +18463,10 @@ xpush
 }
 
 /*User CSS*/
+html {
+  scroll-behavior: smooth;
+}
+
 .site, .site-header, .site-content .entry-header, .site-content .entry-content, .site-content .entry-summary, .site-content .entry-meta, .page-content, .archive-header, .page-header, .contributor-info, .comments-area {
   max-width: 100% !important;
 }
@@ -18570,7 +18574,7 @@ a {
 }
 
 #site-branding.lineheight88 .nav-link {
-  line-height: 88px;
+  line-height: 74px;
 }
 
 #site-branding {
@@ -19475,12 +19479,28 @@ html, body {
   background: linear-gradient(150deg, #000 0%, #000 50%, #000 100%) !important;
 }
 
-.blog-single .sidebar {
+.action-single .sidebar {
   padding: 48px 28px 0;
+}
+
+@media (min-width: 1199px) {
+  .action-tools {
+    max-width: 95%;
+  }
 }
 
 .action-tools div[class*="col-"] {
   background-color: #f9f9f9;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 34px;
+}
+
+.action-tools div[class*="col-"]:first-of-type {
+  border-left: 1px solid #ddd;
+}
+
+.action-tools div[class*="col-"]:last-of-type {
+  border-right: 1px solid #ddd;
 }
 
 .action-tools .group-title {
@@ -19493,6 +19513,8 @@ html, body {
   text-align: center;
   font-size: 28px;
   margin: 0 -15px;
+  line-height: 31px;
+  font-family: "Lato", sans-serif;
 }
 
 .action-tools .group {
@@ -19503,6 +19525,71 @@ html, body {
 .action-tools .subtitle {
   margin-top: 21.3333333333px;
   margin-bottom: 16px;
+}
+
+@media (min-width: 768px) {
+  .action-single .mobile-sidebar {
+    display: none;
+  }
+}
+
+.action-single .mobile-sidebar .widget-title {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .action-single .sidebar {
+    display: none;
+  }
+}
+
+.action-single .sidebar .widget-title {
+  text-decoration: underline;
+}
+
+.action-single .content-section {
+  min-height: 2000px;
+}
+
+.action-single .sidebar-section {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.action-single .sidebar-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Position the items */
+}
+
+.action-single .make-me-sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 150px;
+  padding: 180px 28px 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+  background-color: #F1F1F1;
+}
+
+.action-single .mobile-sidebar {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+  background-color: #F1F1F1;
+  padding-top: 150px;
+  margin-bottom: 30px;
+}
+
+.action-single .nav-link {
+  padding-left: 25px !important;
+  display: inline-block;
+  scroll-behavior: smooth;
 }
 
 /** Mobile Menu Css Start **/

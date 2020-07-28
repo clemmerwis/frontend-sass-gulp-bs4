@@ -1,6 +1,10 @@
 // Should you need to overwrite any of our SCSS code or need to add any custom code, We highly recommend that you add your code into this file, so whenever theme update is available and you update the theme, You will not lose your hard work :)
 
 /*User CSS*/
+html {
+    scroll-behavior: smooth;
+}
+
 .site, .site-header, .site-content .entry-header, .site-content .entry-content, .site-content .entry-summary, .site-content .entry-meta, .page-content, .archive-header, .page-header, .contributor-info, .comments-area {
     max-width: 100% !important;
 }
@@ -101,7 +105,7 @@ a {
 }
 
 #site-branding.lineheight88 .nav-link {
-    line-height: 88px;
+    line-height: 74px;
 }
 #site-branding {
     background-color: #022D6D;
@@ -875,20 +879,29 @@ html, body {
     } 
 }
 
-// Blog Page
-// .blog-page .main-banner {
 
-// }
-
-.blog-single {
+// Action pages
+.action-single {
     .sidebar {
         padding: 48px 28px 0;
     }
 }
 
+
 .action-tools {
+    @include above(1199) {
+        max-width: 95%;
+    }
     div[class*="col-"] {
         background-color: #f9f9f9;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 34px;
+        &:first-of-type {
+            border-left: 1px solid #ddd;
+        }
+        &:last-of-type {
+            border-right: 1px solid #ddd;
+        }
     }
     .group-title {
         border-radius: 4px 0px 0px 0px;
@@ -900,6 +913,8 @@ html, body {
         text-align: center;
         font-size: 28px;
         margin: 0 -15px;
+        line-height: 31px;
+        font-family: $font-family-base;
     }
     .group {
         padding-left: 34px;
@@ -911,8 +926,77 @@ html, body {
     }
 }
 
-/** Mobile Menu Css Start **/
 
+// Action pages sidebar
+.action-single {
+    .mobile-sidebar {
+        @include above(768) {
+            display: none;
+        }
+        .widget-title {
+            text-decoration: underline;
+        }
+    }
+    .sidebar {
+        @include below(768) {
+            display: none;
+        }
+        .widget-title {
+            text-decoration: underline;
+        }
+    }
+    .content-section {
+        min-height: 2000px;
+    }
+    .sidebar-section {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+    }
+      
+    .sidebar-item {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+          
+        /* Position the items */
+        // &:nth-child(2) { top: 25%; }
+        // &:nth-child(3) { top: 50%; }
+        // &:nth-child(4) { top: 75%; }
+    }
+      
+    .make-me-sticky {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 150px;
+        padding: 180px 28px 0;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-top-right-radius: 50%;
+        border-top-left-radius: 50%;
+        background-color: #F1F1F1;
+    }
+
+    .mobile-sidebar {
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-top-right-radius: 50%;
+        border-top-left-radius: 50%;
+        background-color: #F1F1F1;
+        padding-top: 150px;
+        margin-bottom: 30px;
+    }
+
+    .nav-link {
+        padding-left: 25px !important;
+        display: inline-block;
+        scroll-behavior: smooth;
+    }
+}
+
+
+
+/** Mobile Menu Css Start **/
 @media (max-width: 992px){
     .navbar.navbar-expand-lg.navbar-dark.py-4.py-lg-0.px-0.s-md-none {
       display: none !important;
@@ -973,5 +1057,4 @@ html, body {
   .mm-menu .mm-navbar a, .mm-menu .mm-navbar > * {
     color: #f8f8f8;
   }
-  
   /** Mobile Menu Css End **/
